@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'dart:async';
 
 import 'package:bwa_airplane/cubit/auth_cubit.dart';
@@ -24,7 +22,6 @@ class _SplashPageState extends State<SplashPage> {
         Navigator.pushNamedAndRemoveUntil(
             context, "/get-started", (route) => false);
       } else {
-        print(user.email);
         context.read<AuthCubit>().getCurrentUser(user.uid);
         Navigator.pushNamedAndRemoveUntil(
             context, "/main-page", (route) => false);

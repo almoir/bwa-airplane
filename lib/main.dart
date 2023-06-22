@@ -1,10 +1,7 @@
-// ignore_for_file: unused_import
-
 import 'package:bwa_airplane/cubit/auth_cubit.dart';
 import 'package:bwa_airplane/cubit/destination_cubit.dart';
 import 'package:bwa_airplane/cubit/seat_cubit.dart';
 import 'package:bwa_airplane/cubit/transaction_cubit.dart';
-import 'package:bwa_airplane/ui/pages/choose_seat_page.dart';
 import 'package:bwa_airplane/ui/pages/sign_in.dart';
 import 'package:bwa_airplane/ui/pages/success_checkout_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -15,8 +12,6 @@ import './ui/pages/splash_page.dart';
 import './ui/pages/sign_up.dart';
 import './ui/pages/bonus_page.dart';
 import './ui/pages/main_page.dart';
-import './ui/pages/detail_page.dart';
-import './ui/pages/checkout_page.dart';
 import 'cubit/page_cubit.dart';
 
 void main() async {

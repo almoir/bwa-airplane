@@ -1,5 +1,3 @@
-// ignore_for_file: use_rethrow_when_possible
-
 import 'package:bwa_airplane/models/transaction_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -20,7 +18,7 @@ class TransactionService {
         'grandTotal': transaction.grandTotal,
       });
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -37,7 +35,7 @@ class TransactionService {
 
       return transactions;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

@@ -1,5 +1,3 @@
-// ignore_for_file: use_rethrow_when_possible
-
 import 'package:bwa_airplane/models/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -16,7 +14,7 @@ class UserService {
         'balance': user.balance,
       });
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -30,7 +28,7 @@ class UserService {
           hobby: snapshot['hobby'],
           balance: snapshot['balance']);
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

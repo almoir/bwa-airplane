@@ -1,9 +1,7 @@
-// ignore_for_file: depend_on_referenced_packages
-
-import 'package:bloc/bloc.dart';
 import 'package:bwa_airplane/models/transaction_model.dart';
 import 'package:bwa_airplane/services/transaction_service.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'transaction_state.dart';
 

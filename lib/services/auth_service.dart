@@ -1,5 +1,3 @@
-// ignore_for_file: use_rethrow_when_possible
-
 import 'package:bwa_airplane/models/user_model.dart';
 import 'package:bwa_airplane/services/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -21,7 +19,7 @@ class AuthServices {
           await UserService().getUserById(userCredential.user!.uid);
       return user;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -43,7 +41,7 @@ class AuthServices {
       await UserService().setUser(user);
       return user;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -51,7 +49,7 @@ class AuthServices {
     try {
       await _auth.signOut();
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

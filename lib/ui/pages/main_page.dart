@@ -48,8 +48,7 @@ class MainPage extends StatelessWidget {
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
+            children: const [
               CustomNavigationBarItem(
                 index: 0,
                 imageUrl: "assets/icon_home.png",

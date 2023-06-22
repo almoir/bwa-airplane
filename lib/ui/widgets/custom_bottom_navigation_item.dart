@@ -15,29 +15,33 @@ class CustomNavigationBarItem extends StatelessWidget {
       onTap: () {
         context.read<PageCubit>().setPage(index);
       },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(),
-          Image.asset(
-            imageUrl,
-            width: 24,
-            height: 24,
-            color: context.read<PageCubit>().state == index
-                ? kPurpleColor
-                : kGreyColor,
-          ),
-          Container(
-            width: 30,
-            height: 2,
-            decoration: BoxDecoration(
-              color: context.read<PageCubit>().state == index
-                  ? kPurpleColor
-                  : kTransparentColor,
-              borderRadius: BorderRadius.circular(defaultRadius),
-            ),
-          ),
-        ],
+      child: BlocBuilder<PageCubit, int>(
+        builder: (context, state) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(),
+              Image.asset(
+                imageUrl,
+                width: 24,
+                height: 24,
+                color: context.read<PageCubit>().state == index
+                    ? kPurpleColor
+                    : kGreyColor,
+              ),
+              Container(
+                width: 30,
+                height: 2,
+                decoration: BoxDecoration(
+                  color: context.read<PageCubit>().state == index
+                      ? kPurpleColor
+                      : kTransparentColor,
+                  borderRadius: BorderRadius.circular(defaultRadius),
+                ),
+              ),
+            ],
+          );
+        },
       ),
     );
   }

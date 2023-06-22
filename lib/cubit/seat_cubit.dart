@@ -1,6 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages, avoid_print
-
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SeatCubit extends Cubit<List<String>> {
   SeatCubit() : super([]);
@@ -16,13 +14,12 @@ class SeatCubit extends Cubit<List<String>> {
   }
 
   void selecSeat(String id) {
-    print("Previous State: $state");
     if (!isSelected(id)) {
       state.add(id);
     } else {
       state.remove(id);
     }
-    print("New State: $state");
+
     emit(List.from(state));
   }
 }

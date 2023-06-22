@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_is_empty
-
 import 'package:bwa_airplane/cubit/transaction_cubit.dart';
 import 'package:bwa_airplane/shared/theme.dart';
 import 'package:bwa_airplane/ui/widgets/transaction_card.dart';
@@ -29,7 +27,7 @@ class _TransactionPageState extends State<TransactionPage> {
             child: CircularProgressIndicator(),
           );
         } else if (state is TransactionSuccess) {
-          if (state.transactions.length == 0) {
+          if (state.transactions.isEmpty) {
             return Center(
               child: Text("Kamu Belum Memiliki Transaksi"),
             );
